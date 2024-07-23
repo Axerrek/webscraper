@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Scraper - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search (/) for a class, method, ..." spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link">Object
+</div>
+
+    
+    
+    
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-generate_csv">#generate_csv</a>
+    <li ><a href="#method-i-generate_pdf">#generate_pdf</a>
+    <li ><a href="#method-i-scrape">#scrape</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Scraper">
+  <h1 id="class-Scraper" class="class">
+    class Scraper
+  </h1>
+
+  <section class="description">
+    
+<h2 id="class-Scraper-label-Klasa+odpowiedzialna+za+scrapowanie+danych+z+podanych+stron+internetowych">Klasa odpowiedzialna za scrapowanie danych z podanych stron internetowych<span><a href="#class-Scraper-label-Klasa+odpowiedzialna+za+scrapowanie+danych+z+podanych+stron+internetowych">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Klasa ‘Scraper` służy do pobierania i przetwarzania informacji o produktach z różnych stron internetowych. Używa biblioteki `HTTParty` do pobierania treści stron oraz `Nokogiri` do parsowania HTML. Scrapowane dane są następnie przetwarzane i mogą być zapisywane do pliku CSV.</p>
+
+<p>Przykład użycia:</p>
+
+<pre class="ruby"><span class="ruby-identifier">scraper</span> = <span class="ruby-constant">Scraper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;https://example.com/products&#39;</span>, <span class="ruby-value">3</span>)
+<span class="ruby-identifier">products</span> = <span class="ruby-identifier">scraper</span>.<span class="ruby-identifier">scrape</span>
+<span class="ruby-identifier">scraper</span>.<span class="ruby-identifier">generate_csv</span>(<span class="ruby-identifier">products</span>)
+</pre>
+
+  </section>
+
+  <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+
+
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+      <div id="method-c-new" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(base_url, pages = 2)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Utworzenie obiektu scraper, który wyszukuje produkty</p>
+
+<pre class="ruby"><span class="ruby-ivar">@base_url</span> = <span class="ruby-identifier">base_url</span> <span class="ruby-comment"># link strony do przeglądania</span>
+<span class="ruby-ivar">@pages</span> = <span class="ruby-identifier">pages</span>       <span class="ruby-comment"># ilość stron, do przeszukiwania</span>
+</pre>
+
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File classes/scraper.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">base_url</span>, <span class="ruby-identifier">pages</span> = <span class="ruby-value">2</span>)
+  <span class="ruby-ivar">@base_url</span> = <span class="ruby-identifier">base_url</span>
+  <span class="ruby-ivar">@pages</span> = <span class="ruby-identifier">pages</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+      <div id="method-i-generate_csv" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">generate_csv</span><span
+              class="method-args">(products, filename = &#39;products.csv&#39;)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Generuje plik CSV z danymi produktów</p>
+
+          <div class="method-source-code" id="generate_csv-source">
+            <pre><span class="ruby-comment"># File classes/scraper.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">generate_csv</span>(<span class="ruby-identifier">products</span>, <span class="ruby-identifier">filename</span> = <span class="ruby-string">&#39;products.csv&#39;</span>)
+  <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-string">&#39;wb&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">csv</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">csv</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-string">&#39;URL&#39;</span>, <span class="ruby-string">&#39;Image&#39;</span>, <span class="ruby-string">&#39;Name&#39;</span>, <span class="ruby-string">&#39;Price&#39;</span>, <span class="ruby-string">&#39;Description&#39;</span>, <span class="ruby-string">&#39;Engine Capacity&#39;</span>, <span class="ruby-string">&#39;Engine Power&#39;</span>, <span class="ruby-string">&#39;Mileage&#39;</span>, <span class="ruby-string">&#39;Fuel Type&#39;</span>, <span class="ruby-string">&#39;Gearbox&#39;</span>, <span class="ruby-string">&#39;Year&#39;</span>]
+    <span class="ruby-identifier">products</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">product</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">csv</span> <span class="ruby-operator">&lt;&lt;</span> [
+        <span class="ruby-identifier">product</span>.<span class="ruby-identifier">url</span>,
+        <span class="ruby-identifier">product</span>.<span class="ruby-identifier">image</span>,
+        <span class="ruby-identifier">product</span>.<span class="ruby-identifier">name</span>,
+        <span class="ruby-identifier">product</span>.<span class="ruby-identifier">price</span>,
+        <span class="ruby-identifier">product</span>.<span class="ruby-identifier">description</span>,
+        <span class="ruby-identifier">product</span>.<span class="ruby-identifier">engine_capacity</span>,
+        <span class="ruby-identifier">product</span>.<span class="ruby-identifier">engine_power</span>,
+        <span class="ruby-identifier">product</span>.<span class="ruby-identifier">mileage</span>,
+        <span class="ruby-identifier">product</span>.<span class="ruby-identifier">fuel_type</span>,
+        <span class="ruby-identifier">product</span>.<span class="ruby-identifier">gearbox</span>,
+        <span class="ruby-identifier">product</span>.<span class="ruby-identifier">year</span>
+      ]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-generate_pdf" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">generate_pdf</span><span
+              class="method-args">(products)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Generuje plik PDF z danymi produktów</p>
+
+          <div class="method-source-code" id="generate_pdf-source">
+            <pre><span class="ruby-comment"># File classes/scraper.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">generate_pdf</span>(<span class="ruby-identifier">products</span>)
+  <span class="ruby-identifier">css_file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-string">&#39;styles/style.css&#39;</span>)
+  <span class="ruby-identifier">pdf_html</span> = <span class="ruby-node">&quot;&lt;html&gt;&lt;meta charset=&#39;UTF-8&#39;&gt;&lt;head&gt;&lt;style&gt;#{css_file}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&quot;</span>
+
+  <span class="ruby-identifier">products</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">product</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">pdf_html</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;&lt;div class=&#39;product&#39;&gt;&quot;</span>
+    <span class="ruby-identifier">pdf_html</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;&lt;div class=&#39;left&#39;&gt;&lt;img src=&#39;#{product.image}&#39; alt=&#39;Zdjęcie produktu&#39;&gt;&lt;/div&gt;&quot;</span>
+    <span class="ruby-identifier">pdf_html</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;&lt;div class=&#39;right&#39;&gt;&lt;div class=&#39;info&#39;&gt;&quot;</span>
+    <span class="ruby-identifier">pdf_html</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;&lt;h2&gt;#{product.name}&lt;/h2&gt;&lt;div class=&#39;price-and-description&#39;&gt;&quot;</span>
+    <span class="ruby-identifier">pdf_html</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;&lt;p class=&#39;price&#39;&gt;Cena: #{product.price} PLN&lt;/p&gt;&quot;</span>
+    <span class="ruby-identifier">pdf_html</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&#39;&lt;/div&gt;&lt;/div&gt;&lt;h3&gt;Opis:&lt;/h3&gt;&#39;</span>
+    <span class="ruby-identifier">pdf_html</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;&lt;p&gt;#{product.description}&lt;/p&gt;&lt;dl class=&#39;details-list&#39;&gt;&quot;</span>
+    <span class="ruby-identifier">pdf_html</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;#{product.year}&lt;/dd&gt;&lt;/div&gt;&quot;</span>
+    <span class="ruby-identifier">pdf_html</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;#{product.mileage} km&lt;/dd&gt;&lt;/div&gt;&quot;</span>
+    <span class="ruby-identifier">pdf_html</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;#{product.engine_capacity}&lt;/dd&gt;&lt;/div&gt;&quot;</span>
+    <span class="ruby-identifier">pdf_html</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;#{product.engine_power} KM&lt;/dd&gt;&lt;/div&gt;&quot;</span>
+    <span class="ruby-identifier">pdf_html</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;#{product.fuel_type}&lt;/dd&gt;&lt;/div&gt;&quot;</span>
+    <span class="ruby-identifier">pdf_html</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;#{product.gearbox}&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&quot;</span>
+    <span class="ruby-identifier">pdf_html</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;&lt;a href=&#39;#{product.url}&#39; class=&#39;more-info&#39;&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">pdf_html</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&#39;&lt;/body&gt;&lt;/html&gt;&#39;</span>
+  <span class="ruby-identifier">pdf</span> = <span class="ruby-constant">WickedPdf</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">pdf_from_string</span>(<span class="ruby-identifier">pdf_html</span>)
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&#39;products.pdf&#39;</span>, <span class="ruby-string">&#39;wb&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">file</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">pdf</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-scrape" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">scrape</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Pobiera i przetwarza dane produktów ze stron internetowych</p>
+
+          <div class="method-source-code" id="scrape-source">
+            <pre><span class="ruby-comment"># File classes/scraper.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">scrape</span>
+  <span class="ruby-identifier">products</span> = []
+
+  (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-ivar">@pages</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">page</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">url</span> = <span class="ruby-identifier">page</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@base_url</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;#{@base_url}?page=#{page}&quot;</span>
+    <span class="ruby-identifier">response</span> = <span class="ruby-constant">HTTParty</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">url</span>, <span class="ruby-value">headers:</span> {
+      <span class="ruby-string">&#39;User-Agent&#39;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36&#39;</span>
+    })
+
+    <span class="ruby-identifier">document</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>)
+    <span class="ruby-identifier">html_products</span> = <span class="ruby-identifier">document</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-string">&#39;//article[@data-highlighted=&quot;true&quot;]&#39;</span>)
+
+    <span class="ruby-identifier">html_products</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">html_product</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">url_element</span> = <span class="ruby-identifier">html_product</span>.<span class="ruby-identifier">at_xpath</span>(<span class="ruby-string">&#39;.//h1//a&#39;</span>)
+      <span class="ruby-identifier">url</span> = <span class="ruby-identifier">url_element</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">url_element</span>[<span class="ruby-string">&#39;href&#39;</span>] <span class="ruby-operator">:</span> <span class="ruby-string">&#39;No URL&#39;</span>
+
+      <span class="ruby-identifier">image_element</span> = <span class="ruby-identifier">html_product</span>.<span class="ruby-identifier">at_xpath</span>(<span class="ruby-string">&#39;.//div//img&#39;</span>)
+      <span class="ruby-identifier">image</span> = <span class="ruby-identifier">image_element</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">image_element</span>[<span class="ruby-string">&#39;src&#39;</span>] <span class="ruby-operator">:</span> <span class="ruby-string">&#39;No Image&#39;</span>
+      <span class="ruby-identifier">image</span> = <span class="ruby-identifier">image</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/;s=320x240$/</span>, <span class="ruby-string">&#39;&#39;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">image</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&#39;No Image&#39;</span>
+
+      <span class="ruby-identifier">name_element</span> = <span class="ruby-identifier">html_product</span>.<span class="ruby-identifier">at_xpath</span>(<span class="ruby-string">&#39;.//h1//a&#39;</span>)
+      <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name_element</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">name_element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-string">&#39;No Name&#39;</span>
+
+      <span class="ruby-identifier">price_element</span> = <span class="ruby-identifier">html_product</span>.<span class="ruby-identifier">at_xpath</span>(<span class="ruby-string">&#39;.//h3&#39;</span>)
+      <span class="ruby-identifier">price</span> = <span class="ruby-identifier">price_element</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">price_element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-string">&#39;No Price&#39;</span>
+
+      <span class="ruby-identifier">description_element</span> = <span class="ruby-identifier">html_product</span>.<span class="ruby-identifier">at_xpath</span>(<span class="ruby-string">&#39;.//p&#39;</span>)
+      <span class="ruby-identifier">description</span> = <span class="ruby-identifier">description_element</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">description_element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-string">&#39;No Description&#39;</span>
+
+      <span class="ruby-identifier">engine_info</span> = <span class="ruby-identifier">description</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39; • &#39;</span>)
+      <span class="ruby-identifier">engine_capacity</span>, <span class="ruby-identifier">engine_power</span> = <span class="ruby-identifier">engine_info</span>
+
+      <span class="ruby-identifier">mileage_element</span> = <span class="ruby-identifier">html_product</span>.<span class="ruby-identifier">at_xpath</span>(<span class="ruby-string">&#39;.//dd[@data-parameter=\&#39;mileage\&#39;]&#39;</span>)
+      <span class="ruby-identifier">mileage</span> = <span class="ruby-identifier">mileage_element</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">mileage_element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-string">&#39;Unknown&#39;</span>
+      <span class="ruby-identifier">fuel_type_element</span> = <span class="ruby-identifier">html_product</span>.<span class="ruby-identifier">at_xpath</span>(<span class="ruby-string">&#39;.//dd[@data-parameter=\&#39;fuel_type\&#39;]&#39;</span>)
+      <span class="ruby-identifier">fuel_type</span> = <span class="ruby-identifier">fuel_type_element</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">fuel_type_element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-string">&#39;Unknown&#39;</span>
+      <span class="ruby-identifier">gearbox_element</span> = <span class="ruby-identifier">html_product</span>.<span class="ruby-identifier">at_xpath</span>(<span class="ruby-string">&#39;.//dd[@data-parameter=\&#39;gearbox\&#39;]&#39;</span>)
+      <span class="ruby-identifier">gearbox</span> = <span class="ruby-identifier">gearbox_element</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">gearbox_element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-string">&#39;Unknown&#39;</span>
+      <span class="ruby-identifier">year_element</span> = <span class="ruby-identifier">html_product</span>.<span class="ruby-identifier">at_xpath</span>(<span class="ruby-string">&#39;.//dd[@data-parameter=\&#39;year\&#39;]&#39;</span>)
+      <span class="ruby-identifier">year</span> = <span class="ruby-identifier">year_element</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">year_element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-string">&#39;Unknown&#39;</span>
+
+      <span class="ruby-identifier">product</span> = <span class="ruby-constant">Product</span>.<span class="ruby-identifier">new</span>(
+        <span class="ruby-value">url:</span> <span class="ruby-identifier">url</span>,
+        <span class="ruby-value">image:</span> <span class="ruby-identifier">image</span>,
+        <span class="ruby-value">name:</span> <span class="ruby-identifier">name</span>,
+        <span class="ruby-value">price:</span> <span class="ruby-identifier">price</span>,
+        <span class="ruby-value">description:</span> <span class="ruby-identifier">description</span>,
+        <span class="ruby-value">engine_capacity:</span> <span class="ruby-identifier">engine_capacity</span>,
+        <span class="ruby-value">engine_power:</span> <span class="ruby-identifier">engine_power</span>,
+        <span class="ruby-value">mileage:</span> <span class="ruby-identifier">mileage</span>,
+        <span class="ruby-value">fuel_type:</span> <span class="ruby-identifier">fuel_type</span>,
+        <span class="ruby-value">gearbox:</span> <span class="ruby-identifier">gearbox</span>,
+        <span class="ruby-value">year:</span> <span class="ruby-identifier">year</span>
+      )
+      <span class="ruby-identifier">products</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">product</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">products</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.7.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

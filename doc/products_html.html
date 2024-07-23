@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>products.html - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search (/) for a class, method, ..." spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    
+<div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+    <li><a href="./Gemfile.html">Gemfile</a>
+    <li><a href="./Gemfile_lock.html">Gemfile.lock</a>
+    <li><a href="./products_csv.html">products.csv</a>
+    <li><a href="./products_html.html">products.html</a>
+    <li><a href="./styles/style_css.html">style.css</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page products.html">
+
+<p>&lt;html&gt;&lt;meta charset=‘UTF-8’&gt;&lt;head&gt;&lt;style&gt;body {</p>
+
+<pre>margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;</pre>
+
+<p>}</p>
+
+<p>.container {</p>
+
+<pre>display: flex;
+flex-direction: column; /* Produkty jeden pod drugim */</pre>
+
+<p>}</p>
+
+<p>.product {</p>
+
+<pre>display: flex;
+margin-bottom: 20px; /* Odstęp między produktami */
+border: 1px solid #ddd; /* Opcjonalne: dodaje ramkę wokół produktu */
+padding: 5px; /* Opcjonalne: dodaje wewnętrzne odstępy */
+height: auto; /* Wysokość kontenera automatyczna */
+box-sizing: border-box; /* Uwzględnia padding i border w wysokości i szerokości */
+page-break-inside: avoid;
+
+border-radius: 25px;
+border: 10px solid black;
+padding: 2rem 1rem;
+min-height: 3em;
+border-image: url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg width=&#39;100&#39; height=&#39;100&#39; viewBox=&#39;0 0 100 100&#39; fill=&#39;none&#39; xmlns=&#39;http://www.w3.org/2000/svg&#39;%3E %3ClinearGradient id=&#39;g&#39; x1=&#39;0%25&#39; y1=&#39;0%25&#39; x2=&#39;0%25&#39; y2=&#39;100%25&#39;%3E%3Cstop offset=&#39;0%25&#39; stop-color=&#39;%23cffffe&#39; /%3E%3Cstop offset=&#39;25%25&#39; stop-color=&#39;%23f9f7d9&#39; /%3E%3Cstop offset=&#39;50%25&#39; stop-color=&#39;%23fce2ce&#39; /%3E%3Cstop offset=&#39;100%25&#39; stop-color=&#39;%23ffc1f3&#39; /%3E%3C/linearGradient%3E %3Cpath d=&#39;M1.5 1.5 l97 0l0 97l-97 0 l0 -97&#39; stroke-linecap=&#39;square&#39; stroke=&#39;url(%23g)&#39; stroke-width=&#39;3&#39;/%3E %3C/svg%3E&quot;) 1;</pre>
+
+<p>}</p>
+
+<p>.left {</p>
+
+<pre>flex: 35%;
+background-color: #f0f0f0;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative; /* Umożliwia dokładne dopasowanie zdjęcia */</pre>
+
+<p>}</p>
+
+<p>.left img {</p>
+
+<pre>position: absolute; /* Umożliwia pełne wypełnienie kontenera */
+top: 0;
+left: 0;
+border: solid 2px black;
+height: 100%; /* Rozciąga obrazek na maksymalną wysokość kontenera */
+width: 100%; /* Rozciąga obrazek na maksymalną szerokość kontenera */
+object-fit: cover; /* Dopasowuje obrazek, zachowując proporcje */</pre>
+
+<p>}</p>
+
+<p>.right {</p>
+
+<pre>flex: 65%;
+background-color: #ffffff;
+padding: 20px;
+box-sizing: border-box;</pre>
+
+<p>}</p>
+
+<p>.info {</p>
+
+<pre>margin-bottom: 20px;</pre>
+
+<p>}</p>
+
+<p>.info h2 {</p>
+
+<pre>margin: 0 0 10px;</pre>
+
+<p>}</p>
+
+<p>.info p {</p>
+
+<pre>margin: 0;</pre>
+
+<p>}</p>
+
+<p>.details {</p>
+
+<pre>margin-bottom: 20px;</pre>
+
+<p>}</p>
+
+<p>.details h3 {</p>
+
+<pre>margin: 0 0 10px;</pre>
+
+<p>}</p>
+
+<p>.details-list {</p>
+
+<pre>display: flex;
+flex-wrap: wrap;
+gap: 20px;</pre>
+
+<p>}</p>
+
+<p>.details-list div {</p>
+
+<pre>flex: 1;
+min-width: 200px;</pre>
+
+<p>}</p>
+
+<p>.details-list dt {</p>
+
+<pre>font-weight: bold;</pre>
+
+<p>}</p>
+
+<p>.details-list dd {</p>
+
+<pre>margin: 0;</pre>
+
+<p>}</p>
+
+<p>.more-info {</p>
+
+<pre>display: inline-block;
+padding: 10px 20px;
+background-color: #007bff;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+font-weight: bold;</pre>
+
+<p>}</p>
+
+<p>.more-info:hover {</p>
+
+<pre>background-color: #0056b3;</pre>
+
+<p>}</p>
+
+<p>.price-and-description {</p>
+
+<pre>display: flex;
+align-items: center;
+gap: 20px; /* Odstęp między ceną a opisem */</pre>
+
+<p>}</p>
+
+<p>.price {</p>
+
+<pre>font-size: 1.5em; /* Zwiększa rozmiar czcionki */
+font-weight: bold; /* Pogrubienie */</pre>
+
+<p>}</p>
+
+<p>.description {</p>
+
+<pre>flex: 1;</pre>
+
+<p>} &lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImRlZHRnc2g0d292djMtT1RPTU9UT1BMIn0.R5JE3UDxiDXklEn_STWOgqaxL_X85JZ90i-nu-plCC4/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImRlZHRnc2g0d292djMtT1RPTU9UT1BMIn0.R5JE3UDxiDXklEn_STWOgqaxL_X85JZ90i-nu-plCC4/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 65 000 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW Seria 5 530d xDrive&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 2 993 cm3 • 258 KM • 530d xd silnik 125tys przebiegu, prawie pełne wyposażenie.&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2014&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;341 000 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;2 993 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;258 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Diesel&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Automatyczna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-seria-5-530d-xd-silnik-125tys-przebiegu-prawie-pelne-wyposazenie-ID6G2Nha.html">www.otomoto.pl/osobowe/oferta/bmw-seria-5-530d-xd-silnik-125tys-przebiegu-prawie-pelne-wyposazenie-ID6G2Nha.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InFxcG5lNHg2aG1wbi1PVE9NT1RPUEwifQ.t9Ttb47kLtwTPXYvCZdftNkMmv2Bcbeo0mHB7u0PPVk/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InFxcG5lNHg2aG1wbi1PVE9NT1RPUEwifQ.t9Ttb47kLtwTPXYvCZdftNkMmv2Bcbeo0mHB7u0PPVk/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 50 900 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW Seria 5&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 1 995 cm3 • 184 KM • Bmw F10 - 520D - STAN IDEALNY&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2011&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;330 000 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;1 995 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;184 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Diesel&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Automatyczna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-seria-5-bmw-f10-520d-stan-idealny-ID6GAVIP.html">www.otomoto.pl/osobowe/oferta/bmw-seria-5-bmw-f10-520d-stan-idealny-ID6GAVIP.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6Im1xN3B0MmJjeHN4Yy1PVE9NT1RPUEwifQ.XbdiMOKM1swS21GiMqAS0xSZYc_IF3WoKh1d5YM9Xqs/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6Im1xN3B0MmJjeHN4Yy1PVE9NT1RPUEwifQ.XbdiMOKM1swS21GiMqAS0xSZYc_IF3WoKh1d5YM9Xqs/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 69 000 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW Seria 3 320d M Sport&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 1 995 cm3 • 190 KM • M Pakiet Bogate wyposażenie Zadbany&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2017&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;86 844 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;1 995 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;190 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Diesel&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Automatyczna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-seria-3-m-pakiet-bogate-wyposazenie-zadbany-ID6GBFm4.html">www.otomoto.pl/osobowe/oferta/bmw-seria-3-m-pakiet-bogate-wyposazenie-zadbany-ID6GBFm4.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InJ1ZWZrZjkzaWh0NTItT1RPTU9UT1BMIn0.kSULIOMhxdlXSFyaimvyN__g3Nthp4aI9kqyXcI2r1Y/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InJ1ZWZrZjkzaWh0NTItT1RPTU9UT1BMIn0.kSULIOMhxdlXSFyaimvyN__g3Nthp4aI9kqyXcI2r1Y/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 194 900 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW Seria 3&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 2 993 cm3 • 340 KM • Salon Polska BMW M340D, pakiet serwisowy, 340KM 720Nm, Laser, Harman&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2020&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;98 450 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;2 993 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;340 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Diesel&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Automatyczna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-seria-3-salon-polska-bmw-m340d-pakiet-serwisowy-340km-720nm-laser-harman-ID6FBiCe.html">www.otomoto.pl/osobowe/oferta/bmw-seria-3-salon-polska-bmw-m340d-pakiet-serwisowy-340km-720nm-laser-harman-ID6FBiCe.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6IjBweThkdXljbzBheDEtT1RPTU9UT1BMIn0.HOP42mN4mAfKtsP2dsHh6uM4laWgGIE-sSqA9a6Fn1I/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6IjBweThkdXljbzBheDEtT1RPTU9UT1BMIn0.HOP42mN4mAfKtsP2dsHh6uM4laWgGIE-sSqA9a6Fn1I/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 62 000 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW Seria 5 525d xDrive Luxury Line&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 1 995 cm3 • 218 KM • BMW seria 5 525d xDrive Luxury Line&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2013&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;229 000 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;1 995 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;218 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Diesel&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Automatyczna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-seria-5-bmw-seria-5-525d-xdrive-luxury-line-ID6GvMlo.html">www.otomoto.pl/osobowe/oferta/bmw-seria-5-bmw-seria-5-525d-xdrive-luxury-line-ID6GvMlo.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImRjZ2k1ZXk2Mm9kcTEtT1RPTU9UT1BMIn0.i7ZoW33Xyu6tWmVSa7kEf07ku44T49Q9eoywuU8hf_c/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImRjZ2k1ZXk2Mm9kcTEtT1RPTU9UT1BMIn0.i7ZoW33Xyu6tWmVSa7kEf07ku44T49Q9eoywuU8hf_c/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 21 000 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW Seria 5&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 2 497 cm3 • 177 KM • Bmw e60 525d&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2005&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;442 000 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;2 497 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;177 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Diesel&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Automatyczna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-seria-5-bmw-e60-525d-ID6GAVuE.html">www.otomoto.pl/osobowe/oferta/bmw-seria-5-bmw-e60-525d-ID6GAVuE.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6IngzdWtkeWE0M2x1bjEtT1RPTU9UT1BMIn0.4bYXMM6y0sfI0Czin16guN51V_wRzJ7F-IGk7kiAlC8/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6IngzdWtkeWE0M2x1bjEtT1RPTU9UT1BMIn0.4bYXMM6y0sfI0Czin16guN51V_wRzJ7F-IGk7kiAlC8/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 295 000 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW X5 M M50i&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 4 395 cm3 • 530 KM&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2021&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;91 000 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;4 395 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;530 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Benzyna&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Automatyczna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-x5-m-ID6G0vNX.html">www.otomoto.pl/osobowe/oferta/bmw-x5-m-ID6G0vNX.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6Ijl5azUxcmU3ODRjNTEtT1RPTU9UT1BMIn0.kd9DIesltX--7x5V9feR_7VM9IMz9w6OU-3IfOd09es/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6Ijl5azUxcmU3ODRjNTEtT1RPTU9UT1BMIn0.kd9DIesltX–7x5V9feR_7VM9IMz9w6OU-3IfOd09es/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 67 700 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW Seria 4 430i Cabrio Advantage&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 1 998 cm3 • 252 KM • 430i F36 Kabriolet 2.0 252ps mała szkoda FV23% BRUTTO&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2018&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;119 000 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;1 998 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;252 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Benzyna&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Automatyczna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-seria-4-430i-f36-kabriolet-2-0-252ps-mala-szkoda-fv23-brutto-ID6G98Iv.html">www.otomoto.pl/osobowe/oferta/bmw-seria-4-430i-f36-kabriolet-2-0-252ps-mala-szkoda-fv23-brutto-ID6G98Iv.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InpmbTM3bmxtY2loMDItT1RPTU9UT1BMIn0.h-tMMZVtzdvo6jc9thg7AOzqlICyOSGasjg6lvmxDPU/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InpmbTM3bmxtY2loMDItT1RPTU9UT1BMIn0.h-tMMZVtzdvo6jc9thg7AOzqlICyOSGasjg6lvmxDPU/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 48 900 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW X1&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 1 995 cm3 • 116 KM&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2014&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;225 462 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;1 995 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;116 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Diesel&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Manualna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-x1-ID6FU1Po.html">www.otomoto.pl/osobowe/oferta/bmw-x1-ID6FU1Po.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InpobmUwcW01M3Y5bDEtT1RPTU9UT1BMIn0.gynYr-TJoinuYDxtIcnpMMqs7_xl8X5EPRQw-27XvJ0/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InpobmUwcW01M3Y5bDEtT1RPTU9UT1BMIn0.gynYr-TJoinuYDxtIcnpMMqs7_xl8X5EPRQw-27XvJ0/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 55 900 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW X6&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 2 979 cm3 • 306 KM • Sprzedam BMW X6. Oryginalny przebieg.&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2010&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;172 000 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;2 979 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;306 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Benzyna&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Automatyczna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-x6-sprzedam-bmw-x6-oryginalny-przebieg-ID6GAVoI.html">www.otomoto.pl/osobowe/oferta/bmw-x6-sprzedam-bmw-x6-oryginalny-przebieg-ID6GAVoI.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImhzYXR5YjgzMDN0YTMtT1RPTU9UT1BMIn0.VpdvSW5bA8l3lgysOHvmvqlLjckSl5euiXnMDkkvcUU/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImhzYXR5YjgzMDN0YTMtT1RPTU9UT1BMIn0.VpdvSW5bA8l3lgysOHvmvqlLjckSl5euiXnMDkkvcUU/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 65 300 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW Seria 5 520d Luxury Line&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 1 995 cm3 • 190 KM • BMW SERIA 5 2.0D F11 2015 Polift&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2015&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;230 000 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;1 995 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;190 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Diesel&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Automatyczna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-seria-5-bmw-seria-5-2-0d-f11-2015-polift-ID6Ggx8U.html">www.otomoto.pl/osobowe/oferta/bmw-seria-5-bmw-seria-5-2-0d-f11-2015-polift-ID6Ggx8U.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6Imk3ZzM0anMyazd4Zi1PVE9NT1RPUEwifQ.cYoIE0p1Zm419dFlvc0gU7AH1RtzmnbQc6WAUr3Q--w/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6Imk3ZzM0anMyazd4Zi1PVE9NT1RPUEwifQ.cYoIE0p1Zm419dFlvc0gU7AH1RtzmnbQc6WAUr3Q–w/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 44 900 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW Seria 5&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 1 995 cm3 • 177 KM • 520D, automat, salon POLSKA&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2009&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;269 000 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;1 995 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;177 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Diesel&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Automatyczna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-seria-5-520d-automat-salon-polska-ID6GAQv9.html">www.otomoto.pl/osobowe/oferta/bmw-seria-5-520d-automat-salon-polska-ID6GAQv9.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InNmMmh6aXlkZHU1NS1PVE9NT1RPUEwifQ.RSrWmTMHaImzFL32OPdh94QIopxLcbyk9AohCsr1kVI/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InNmMmh6aXlkZHU1NS1PVE9NT1RPUEwifQ.RSrWmTMHaImzFL32OPdh94QIopxLcbyk9AohCsr1kVI/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 56 500 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW Seria 5&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 1 995 cm3 • 184 KM • BMW Seria 5 F10 2.0d 184KM automat dociągi&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2013&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;269 000 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;1 995 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;184 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Diesel&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Automatyczna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-seria-5-bmw-seria-5-f10-2-0d-184km-automat-dociagi-ID6Gm4L6.html">www.otomoto.pl/osobowe/oferta/bmw-seria-5-bmw-seria-5-f10-2-0d-184km-automat-dociagi-ID6Gm4L6.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImF0MGxhcmR1czBxYzItT1RPTU9UT1BMIn0.XathF9kTdXiVXWNv56SzsKlPeah16d2JuJ5_s4mTTK0/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImF0MGxhcmR1czBxYzItT1RPTU9UT1BMIn0.XathF9kTdXiVXWNv56SzsKlPeah16d2JuJ5_s4mTTK0/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 45 400 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW 3GT 320d xDrive&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 1 995 cm3 • 184 KM • 320d X-drive Grzane fotele i kierownica, dach panoramiczny&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2013&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;306 000 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;1 995 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;184 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Diesel&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Manualna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-3gt-320d-x-drive-grzane-fotele-i-kierownica-dach-panoramiczny-ID6GwVvK.html">www.otomoto.pl/osobowe/oferta/bmw-3gt-320d-x-drive-grzane-fotele-i-kierownica-dach-panoramiczny-ID6GwVvK.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6Imc0dDBlczBwdnMxcTItT1RPTU9UT1BMIn0.iZ24kcmvhogR4xK9X6zemsM6h-r0FaJkWoBLSbRciRw/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6Imc0dDBlczBwdnMxcTItT1RPTU9UT1BMIn0.iZ24kcmvhogR4xK9X6zemsM6h-r0FaJkWoBLSbRciRw/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 119 900 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW X5 M M50d&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 2 993 cm3 • 381 KM • BMW X5 M50D,salon Polska, Webasto,&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2014&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;173 000 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;2 993 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;381 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Diesel&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Automatyczna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-x5-m-bmw-x5-m50d-salon-polska-webasto-ID6G6Ijj.html">www.otomoto.pl/osobowe/oferta/bmw-x5-m-bmw-x5-m50d-salon-polska-webasto-ID6G6Ijj.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImswczljanVqb3R0bzItT1RPTU9UT1BMIn0.4cn57AtEYSDATdHNKaHkRQM0i9tdAkCLHop8qkASB00/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImswczljanVqb3R0bzItT1RPTU9UT1BMIn0.4cn57AtEYSDATdHNKaHkRQM0i9tdAkCLHop8qkASB00/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 44 990 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW X1&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 1 995 cm3 • 183 KM • BMW X1 E84 20d sDrive&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2013&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;217 000 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;1 995 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;183 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Diesel&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Automatyczna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-x1-bmw-x1-e84-20d-sdrive-ID6GAV8m.html">www.otomoto.pl/osobowe/oferta/bmw-x1-bmw-x1-e84-20d-sdrive-ID6GAV8m.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6Im51eHBwYWFkMWU3aTEtT1RPTU9UT1BMIn0.errxilXkIeoS3bDIJkQC28ylITSTOOyzv_g2aaF22Ss/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6Im51eHBwYWFkMWU3aTEtT1RPTU9UT1BMIn0.errxilXkIeoS3bDIJkQC28ylITSTOOyzv_g2aaF22Ss/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 44 900 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW Seria 5 520d Touring&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 1 995 cm3 • 184 KM • F11 2.0 185 KM Alu18 Kamera Skóra Bi-Xenon SERWIS Nowy Rozrząd Automat&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2011&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;260 000 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;1 995 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;184 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Diesel&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Automatyczna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-seria-5-f11-2-0-185-km-alu18-kamera-skora-bi-xenon-serwis-nowy-rozrzad-automat-ID6G939u.html">www.otomoto.pl/osobowe/oferta/bmw-seria-5-f11-2-0-185-km-alu18-kamera-skora-bi-xenon-serwis-nowy-rozrzad-automat-ID6G939u.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImhxenRhcWZqbDR2NDMtT1RPTU9UT1BMIn0.Kk1XyyBDqFevc-lLYylOikdZDTAKpDu_GFlpjPI7oMw/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImhxenRhcWZqbDR2NDMtT1RPTU9UT1BMIn0.Kk1XyyBDqFevc-lLYylOikdZDTAKpDu_GFlpjPI7oMw/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 42 900 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW Seria 5 520d Modern Line&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 1 995 cm3 • 184 KM • F11 520D 2.0D 184KM! Manualna! Xenon! Navi! PDC! Oryginał!&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2011&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;235 257 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;1 995 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;184 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Diesel&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Manualna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-seria-5-f11-520d-2-0d-184km-manualna-xenon-navi-pdc-oryginal-ID6GAWQe.html">www.otomoto.pl/osobowe/oferta/bmw-seria-5-f11-520d-2-0d-184km-manualna-xenon-navi-pdc-oryginal-ID6GAWQe.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘product’&gt;&lt;div class=‘left’&gt;&lt;img src=‘<a href="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InNlYmh6aDdnb3p1dTItT1RPTU9UT1BMIn0.UucU827Zo2gx7bWIQzChlUJhMXeQtO_g43rPquhun10/image">ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InNlYmh6aDdnb3p1dTItT1RPTU9UT1BMIn0.UucU827Zo2gx7bWIQzChlUJhMXeQtO_g43rPquhun10/image</a>’ alt=‘Zdjęcie produktu’&gt;&lt;/div&gt;&lt;div class=‘right’&gt;&lt;div class=‘info’&gt;&lt;div class=‘price’&gt;Cena: 420 660 PLN&lt;/div&gt;&lt;div class=‘name-description’&gt;&lt;h2&gt;BMW M5&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=‘description’&gt;&lt;p&gt;&lt;strong&gt;Opis:&lt;/strong&gt; 4 395 cm3 • 625 KM • BMW M5 Competition 625 km 1 właściciel auto BMW salon Polska&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Rok:&lt;/dt&gt;&lt;dd&gt;2019&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Przebieg:&lt;/dt&gt;&lt;dd&gt;63 000 km km&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Pojemność silnika:&lt;/dt&gt;&lt;dd&gt;4 395 cm3&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Moce silnika:&lt;/dt&gt;&lt;dd&gt;625 KM KM&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Typ paliwa:&lt;/dt&gt;&lt;dd&gt;Benzyna&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Skrzynia biegów:&lt;/dt&gt;&lt;dd&gt;Automatyczna&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;&lt;a href=‘<a href="https://www.otomoto.pl/osobowe/oferta/bmw-m5-bmw-m5-competition-625-km-1-wlasciciel-auto-bmw-salon-polska-ID6GAijN.html">www.otomoto.pl/osobowe/oferta/bmw-m5-bmw-m5-competition-625-km-1-wlasciciel-auto-bmw-salon-polska-ID6GAijN.html</a>’ class=‘more-info’&gt;Więcej informacji&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</p>
+
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.7.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

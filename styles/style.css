@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Produkty jeden pod drugim */
+}
+
+.product {
+    display: flex;
+    margin-bottom: 20px; /* Odstęp między produktami */
+    border: 1px solid #ddd; /* Opcjonalne: dodaje ramkę wokół produktu */
+    padding: 5px; /* Opcjonalne: dodaje wewnętrzne odstępy */
+    height: auto; /* Wysokość kontenera automatyczna */
+    box-sizing: border-box; /* Uwzględnia padding i border w wysokości i szerokości */
+    page-break-inside: avoid;
+
+    }
+
+.left {
+    flex: 35%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Umożliwia dokładne dopasowanie zdjęcia */
+}
+
+.left img {
+    position: absolute; /* Umożliwia pełne wypełnienie kontenera */
+    top: 0;
+    left: 0;
+    border: solid 2px black;
+    height: 100%; /* Rozciąga obrazek na maksymalną wysokość kontenera */
+    width: 100%; /* Rozciąga obrazek na maksymalną szerokość kontenera */
+    object-fit: cover; /* Dopasowuje obrazek, zachowując proporcje */
+}
+
+.right {
+    flex: 65%;
+    background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+.info h2 {
+    margin: 0 0 10px;
+}
+
+.info p {
+    margin: 0;
+}
+
+.details {
+    margin-bottom: 20px;
+}
+
+.details h3 {
+    margin: 0 0 10px;
+}
+
+.details-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.details-list div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.details-list dt {
+    font-weight: bold;
+}
+
+.details-list dd {
+    margin: 0;
+}
+
+.more-info {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.more-info:hover {
+    background-color: #0056b3;
+}
+
+.price-and-description {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Odstęp między ceną a opisem */
+}
+
+.price {
+    font-size: 1.5em; /* Zwiększa rozmiar czcionki */
+    font-weight: bold; /* Pogrubienie */
+}
+
+.description {
+    flex: 1;
+}

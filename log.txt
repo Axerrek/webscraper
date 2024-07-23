@@ -1,0 +1,7 @@
+# Logfile created on 2024-07-23 08:12:27 +0000 by logger.rb/v1.6.0
+E, [2024-07-23T08:20:11.342488 #477] ERROR -- : Wystąpił błąd: wrong number of arguments (given 1, expected 2)
+E, [2024-07-23T08:20:11.355855 #477] ERROR -- : /home/hosting/files/webscrapper/classes/scraper.rb:113:in `generate_pdf'
+main.rb:50:in `<main>'
+E, [2024-07-23T08:20:28.657970 #483] ERROR -- : Wystąpił błąd: wrong number of arguments (given 1, expected 2)
+E, [2024-07-23T08:20:28.658067 #483] ERROR -- : /home/hosting/files/webscrapper/classes/scraper.rb:113:in `generate_pdf'
+main.rb:50:in `<main>'
