@@ -1,12 +1,63 @@
 # Web Scraper
 
-Web Scraper to narzędzie do automatycznego pobierania danych z witryn internetowych. Umożliwia wydobywanie i analizowanie treści stron internetowych w celu pozyskania przydatnych informacji.
+Web Scraper aplikacja napisania w Ruby, która umożliwia scrapowanie ogłoszeń samochodowych z wybranej strony internetowej - domyślnie otomoto.pl i generowanie raportów w formacie CSV i PDF.
 
-## Przykłady użycia i wyniki:
+## Funkcjonalności
 
-Na początku zostaniemy poproszenie o wypisanie marki samochodu, który nas interesuje.
-Po wypisaniu marki, która znajduje się na liście, program wczyta odpowiedni link oraz przejrzy odpowiednią liczbę stron.
-Dostaniemy krótkie lecz szczegółowe informacje w konsoli o produktach, zostanie wygenerowany plik CSV z wszystkimi wynikami oraz plik PDF.
-Przykładowy zrzut ekranu z wygenerowanego pliku PDF
+- Wyszukiwanie ogłoszeń samochodowych według marki (BMW, Audi, Toyota, Ford, Mercedes).
+- Scrapowanie danych z ogłoszeń samochodowych, w tym URL, zdjęcie, nazwa, cena, opis, pojemność silnika, moc silnika, przebieg, typ paliwa, rodzaj skrzyni biegów i rok produkcji.
+- Generowanie raportów w formacie CSV i PDF.
 
-![image](https://github.com/user-attachments/assets/7124256b-cd69-4d42-ae19-d85241314efe)
+## Wymagania
+
+- Ruby 2.7 lub nowszy
+- Gem `nokogiri`
+- Gem `httparty`
+- Gem `wicked_pdf`
+- Gem `csv`
+
+## Instalacja
+
+1. Sklonuj repozytorium:
+
+   ```bash
+   git clone <URL_REPO>
+2. Przejdź do katalogu
+   ```bash
+    cd <NAZWA_PROJEKTU>
+3. Zainstaluj wymagane gemy:
+
+bash
+
+    bundle install
+    ruby main.rb
+
+Wprowadź markę samochodu, którą chcesz wyszukać, np. BMW, Audi, Toyota.
+
+Aplikacja pobierze dane o samochodach z podanej strony internetowej i wygeneruje raporty:
+
+    products.csv - plik CSV z danymi produktów.
+    products.pdf - plik PDF z danymi produktów.
+
+
+# Testy jednostkowe
+
+Testy jednostkowe dla klasy Scraper można uruchomić za pomocą RSpec.
+
+Uruchom testy:
+
+    rspec
+
+Przykład użycia klasy Scraper
+
+ruby
+
+require_relative 'classes/scraper'
+
+scraper = Scraper.new('https://www.otomoto.pl/osobowe/bmw')
+products = scraper.scrape
+scraper.generate_csv(products)
+scraper.generate_pdf(products, 'BMW')
+
+Przykładowe wyniki:
+
