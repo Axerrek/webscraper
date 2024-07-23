@@ -51,7 +51,3 @@ Uruchom testy:
 Przykładowe wyniki dla wygenerowanego PDF:
 
 ![image](https://github.com/user-attachments/assets/67fe15db-2b69-4b24-a8ec-a5833299336a)
-
-
-Przykładowe wyniki:
-
