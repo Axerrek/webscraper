@@ -48,16 +48,10 @@ Uruchom testy:
 
     rspec
 
-Przykład użycia klasy Scraper
+Przykładowe wyniki dla wygenerowanego PDF:
 
-ruby
+![image](https://github.com/user-attachments/assets/67fe15db-2b69-4b24-a8ec-a5833299336a)
 
-require_relative 'classes/scraper'
-
-scraper = Scraper.new('https://www.otomoto.pl/osobowe/bmw')
-products = scraper.scrape
-scraper.generate_csv(products)
-scraper.generate_pdf(products, 'BMW')
 
 Przykładowe wyniki:
 
